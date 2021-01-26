@@ -18,7 +18,6 @@ class CreatePurchasesTable extends Migration
             $table->string('customer_name');
             $table->string('customer_email');
             $table->foreignId('product_id')->constrained();
-            // $table->foreign('product_id')->refrences('id')->on('products');
             $table->integer('amount');
             $table->decimal('cost');
             $table->timestamps();
