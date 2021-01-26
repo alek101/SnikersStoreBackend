@@ -14,8 +14,8 @@ class PurchaseController extends Controller
             'customer_name'=>'required',
             'customer_email'=>'required',
             'product_id'=>'required',
-            'amount'=>'required',
-            'cost'=>'required',
+            'amount'=>'required|number',
+            'cost'=>'required|number',
         ]);
 
         Purchase::create($validatedArticles);
