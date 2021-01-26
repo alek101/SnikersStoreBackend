@@ -7,9 +7,10 @@ use App\Models\Purchase;
 
 class PurchaseController extends Controller
 {
-    public function store(Request $request)
+    
+    public function store()
     {
-        $validatedArticles = $request->validate([
+        $validatedArticles = request()->validate([
             'customer_name'=>'required',
             'customer_email'=>'required',
             'product_id'=>'required',
