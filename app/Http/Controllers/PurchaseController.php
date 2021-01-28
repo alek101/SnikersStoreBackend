@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Purchase;
+use Illuminate\Support\Facades\DB;
 
 class PurchaseController extends Controller
 {
@@ -27,13 +28,17 @@ class PurchaseController extends Controller
         $request->validate([
             'itemsBoughtArray'=>'required'
         ]);
-        
+
         $data=$request->itemsBoughtArray;
 
-        foreach ($data as $item) {
-           $newPurchase=new Purchase();
-           $newPurchase->store($item['customer_name'],$item['customer_email'],$item['product_id'],$item['amount'],$item['cost']);
-        }
+        DB::transaction(function() use ($data)
+            {
+            foreach ($data as $item) {
+            $newPurchase=new Purchase();
+            $newPurchase->store($item['customer_name'],$item['customer_email'],$item['product_id'],$item['amount'],$item['cost']);
+            } 
+        });
+        
 
         return json_encode("Purchase is done!");
     }
