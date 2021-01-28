@@ -21,4 +21,20 @@ class PurchaseController extends Controller
         Purchase::create($validatedArticles);
         return json_encode("Purchase is done!");
     }
+
+    public function storeMany(Request $request)
+    {
+        $request->validate([
+            'itemsBoughtArray'=>'required'
+        ]);
+        
+        $data=$request->itemsBoughtArray;
+
+        foreach ($data as $item) {
+           $newPurchase=new Purchase();
+           $newPurchase->store($item['customer_name'],$item['customer_email'],$item['product_id'],$item['amount'],$item['cost']);
+        }
+
+        return json_encode("Purchase is done!");
+    }
 }
