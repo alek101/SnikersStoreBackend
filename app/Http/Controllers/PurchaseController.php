@@ -19,6 +19,6 @@ class PurchaseController extends Controller
         ]);
 
         Purchase::create($validatedArticles);
-        return json_encode($validatedArticles);
+        return json_encode("Purchase is done!");
     }
 }
