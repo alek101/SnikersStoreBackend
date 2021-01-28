@@ -15,10 +15,16 @@ class ProductTableSeeder extends Seeder
     public function run()
     {
         $p1=new Product();
-        $p1->store('patika1',100,'https://media.gq.com/photos/5ff8910fe3c625daa33f7a7f/16:9/w_2560%2Cc_limit/NIKE-Dunks.jpg');
+        $p1->store('SuperModel1',100,'https://media.gq.com/photos/5ff8910fe3c625daa33f7a7f/16:9/w_2560%2Cc_limit/NIKE-Dunks.jpg');
         $p2=new Product();
-        $p2->store('patika2',200,'https://dynaimage.cdn.cnn.com/cnn/q_auto,w_1865,c_fill,g_auto,h_1049,ar_16:9/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F200814092431-01b-michael-jordan-sneakers-auction.jpg');
+        $p2->store('ExecutiveModel',200,'https://dynaimage.cdn.cnn.com/cnn/q_auto,w_1865,c_fill,g_auto,h_1049,ar_16:9/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F200814092431-01b-michael-jordan-sneakers-auction.jpg');
         $p3=new Product();
-        $p3->store('patika3',150,'https://rukminim1.flixcart.com/image/880/1056/jmwch3k0/shoe/j/y/n/dg-292-white-blue-patti-10-digitrendzz-white-original-imaf9p36fkykfjqt.jpeg?q=50');
+        $p3->store('WhowhooModel',150,'https://rukminim1.flixcart.com/image/880/1056/jmwch3k0/shoe/j/y/n/dg-292-white-blue-patti-10-digitrendzz-white-original-imaf9p36fkykfjqt.jpeg?q=50');
+        $p4=new Product();
+        $p4->store('SuperModel5',123,'https://media.gq.com/photos/5ff8910fe3c625daa33f7a7f/16:9/w_2560%2Cc_limit/NIKE-Dunks.jpg');
+        $p5=new Product();
+        $p5->store('ExecutiveMode12',246,'https://dynaimage.cdn.cnn.com/cnn/q_auto,w_1865,c_fill,g_auto,h_1049,ar_16:9/http%3A%2F%2Fcdn.cnn.com%2Fcnnnext%2Fdam%2Fassets%2F200814092431-01b-michael-jordan-sneakers-auction.jpg');
+        $p6=new Product();
+        $p6->store('WhowhooModel7',167,'https://rukminim1.flixcart.com/image/880/1056/jmwch3k0/shoe/j/y/n/dg-292-white-blue-patti-10-digitrendzz-white-original-imaf9p36fkykfjqt.jpeg?q=50');
     }
 }
