@@ -9,3 +9,7 @@ Instruction:
 2. php artisan migrate or php artisan migrate:fresh
 3. php artisan db:seed
 4. php artisan serve
+
+Frontend: https://github.com/alek101/sneakersstorefrontend
+
+Aleksandar Petrović
