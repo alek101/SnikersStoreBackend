@@ -11,13 +11,13 @@ class Purchase extends Model
 
     protected $guarded=[];
 
-    public function store($customer_name,$customer_email,$product_id,$amount,$cost)
+    public function store($item)
     {
-        $this->customer_name=$customer_name;
-        $this->customer_email=$customer_email;
-        $this->product_id=$product_id;
-        $this->amount=$amount;
-        $this->cost=$cost;
+        $this->customer_name=$item["customer_name"];
+        $this->customer_email=$item["customer_email"];
+        $this->product_id=$item["product_id"];
+        $this->amount=$item["amount"];
+        $this->cost=$item["cost"];
 
         $this->saveOrFail();
     }

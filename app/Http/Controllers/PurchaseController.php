@@ -35,7 +35,7 @@ class PurchaseController extends Controller
             {
             foreach ($data as $item) {
             $newPurchase=new Purchase();
-            $newPurchase->store($item['customer_name'],$item['customer_email'],$item['product_id'],$item['amount'],$item['cost']);
+            $newPurchase->store($item);
             } 
         });
         
